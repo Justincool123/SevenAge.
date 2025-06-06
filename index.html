@@ -12,19 +12,26 @@
       background-size: cover;
       color: #fff;
     }
-    nav {
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 1rem;
+    header {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 0.5rem 2rem;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0.5rem 1rem;
       font-weight: bold;
       font-size: 1.1rem;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #00e0ff;
@@ -67,13 +74,16 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#start">Startseite</a>
-    <a href="#info">Über uns</a>
-    <a href="#spenden">Spenden</a>
-    <a href="#regeln">Regeln</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+  <header>
+    <img src="logoo.png" alt="SevenAge Logo">
+    <nav>
+      <a href="#start">Startseite</a>
+      <a href="#info">Über uns</a>
+      <a href="#spenden">Spenden</a>
+      <a href="#regeln">Regeln</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
   <div class="section" id="start">
     <h1>Willkommen bei SevenAge</h1>
