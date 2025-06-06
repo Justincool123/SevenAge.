@@ -3,73 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SevenAge ARK Server</title>
+  <title>SevenAge PvP Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images5.alphacoders.com/650/650519.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
       color: #fff;
     }
     header {
+      background-color: #111;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 0.5rem 2rem;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #ff0033;
     }
     header img {
       height: 60px;
     }
     nav {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
     }
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #ff0033;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
     }
     nav a:hover {
-      color: #00e0ff;
+      background-color: #ff0033;
+      color: #000;
     }
-    .section {
-      padding: 3rem;
-      background-color: rgba(0, 0, 0, 0.7);
+    .container {
+      max-width: 1000px;
       margin: 2rem auto;
-      max-width: 900px;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      padding: 2rem;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff0033;
     }
     h1, h2 {
-      color: #00e0ff;
-      margin-top: 0;
+      color: #ff0033;
+    }
+    .donate-tier {
+      background-color: #1a1a1a;
+      border: 1px solid #ff0033;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
     }
     .donate-button {
       display: inline-block;
-      background-color: #00e0ff;
-      color: black;
-      padding: 1rem 2rem;
-      border-radius: 10px;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #ff0033;
+      color: #000;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 1rem;
-      transition: background-color 0.3s;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .donate-button:hover {
-      background-color: #00b4cc;
-    }
-    ul {
-      padding-left: 1.2rem;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff0033;
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.85);
-      margin-top: 2rem;
+      padding: 2rem 1rem;
+      color: #888;
+      background-color: #111;
+      margin-top: 4rem;
     }
   </style>
 </head>
@@ -78,56 +88,58 @@
     <img src="logoo.png" alt="SevenAge Logo">
     <nav>
       <a href="#start">Startseite</a>
-      <a href="#info">Über uns</a>
-      <a href="#spenden">Spenden</a>
-      <a href="#regeln">Regeln</a>
+      <a href="#tiers">Supporter Tiers</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
-  <div class="section" id="start">
-    <h1>Willkommen bei SevenAge</h1>
-    <p>SevenAge ist dein PvP ARK: Survival Evolved Server – mit aktiver Community, Events, Balancing und spannenden Herausforderungen!</p>
+  <div class="container" id="start">
+    <h1>Unterstütze SevenAge PvP</h1>
+    <p>Werde Teil unserer Community und unterstütze den Server mit einer Spende. Jeder Beitrag hilft uns, den Server online und besser zu halten!</p>
   </div>
 
-  <div class="section" id="info">
-    <h2>Über uns / Serverinfo</h2>
-    <p>
-      SevenAge bietet ein intensives PvP-Erlebnis mit angepassten Raten, Admin-Support, Anti-Cheat-Maßnahmen und regelmäßigen Events. Unsere Community steht für Fairness, Action und Teamgeist.
-    </p>
-    <p>
-      <strong>Servertyp:</strong> PvP<br>
-      <strong>Mods:</strong> Strukture+, DinoOverhaul, Custom Drops<br>
-      <strong>Raten:</strong> 5x XP, 10x Taming, 5x Harvest<br>
-    </p>
+  <div class="container" id="tiers">
+    <h2>Supporter Tiers</h2>
+
+    <div class="donate-tier">
+      <h3>Tier 1 – Survivor (5€)</h3>
+      <ul>
+        <li>Discord-Rolle</li>
+        <li>Supporter Icon im Spiel</li>
+        <li>Zugang zu exklusivem Discord-Kanal</li>
+      </ul>
+      <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Jetzt spenden</a>
+    </div>
+
+    <div class="donate-tier">
+      <h3>Tier 2 – Hunter (10€)</h3>
+      <ul>
+        <li>Alle Vorteile von Tier 1</li>
+        <li>Kosmetisches Skin-Paket</li>
+        <li>Extra Loot Drop</li>
+      </ul>
+      <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Jetzt spenden</a>
+    </div>
+
+    <div class="donate-tier">
+      <h3>Tier 3 – Apex Predator (20€)</h3>
+      <ul>
+        <li>Alle Vorteile von Tier 1 & 2</li>
+        <li>VIP Discord-Rolle</li>
+        <li>Early Access zu Events</li>
+      </ul>
+      <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Jetzt spenden</a>
+    </div>
   </div>
 
-  <div class="section" id="spenden">
-    <h2>Spenden</h2>
-    <p>Unterstütze unseren Server und hilf uns bei der Finanzierung von Hosting, Events und weiteren Features.</p>
-    <a class="donate-button" href="https://www.paypal.com/donate" target="_blank">Spenden via PayPal / Kreditkarte</a>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">* Alle Spenden sind freiwillig. Spender erhalten Dankbarkeit und können kleine kosmetische Boni erhalten (siehe Discord).</p>
-  </div>
-
-  <div class="section" id="regeln">
-    <h2>Regeln</h2>
-    <ul>
-      <li>Kein Cheating, kein Exploiting</li>
-      <li>Griefing nur im Rahmen der PvP-Regeln</li>
-      <li>Kein toxisches Verhalten – Respekt ist Pflicht</li>
-      <li>Raid-Zeiten und Offline-Schutz beachten (siehe Discord)</li>
-      <li>Admin-Entscheidungen sind bindend</li>
-    </ul>
-  </div>
-
-  <div class="section" id="kontakt">
-    <h2>Kontakt / Discord</h2>
-    <p>Fragen, Probleme oder einfach plaudern? Wir sind über Discord erreichbar:</p>
-    <a class="donate-button" href="https://discord.gg/YOURDISCORDLINK" target="_blank">SevenAge Discord beitreten</a>
+  <div class="container" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Fragen oder Probleme? Tritt unserem Discord bei!</p>
+    <a class="donate-button" href="https://discord.gg/YOURDISCORDLINK" target="_blank">Discord beitreten</a>
   </div>
 
   <footer>
-    &copy; 2025 SevenAge ARK Server – Powered by Survivors
+    &copy; 2025 SevenAge PvP – Survive. Build. Conquer.
   </footer>
 </body>
 </html>
